@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        3. Товары в корзине хранятся в массиве. Задачи:
+            a) Организовать такой массив для хранения товаров в корзине;
+             b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+        */
+        function countBasketPrice(basket) {
+            let total = 0;
+            for (let i = 0, len = basket.length; i < len; ++i) {
+                total = total + basket[i][2];
+            }
+            return total;
+        }
+        let shoppingCart = new Array;
+        let productV1 = ['id', 'name', 999];
+        let productV2 = ['id', 'name', 2999];
+        let productV3 = ['id', 'name', 6666];
+        let productV4 = ['id', 'name', 8932];
+    
+        shoppingCart.push(productV1, productV2, productV3, productV4);
+        console.log(shoppingCart);
+        console.log(countBasketPrice(shoppingCart));
+
+    </script>
+</body>
+</html>
